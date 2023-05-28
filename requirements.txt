@@ -1,5 +1,4 @@
-os
 python-dotenv
 discord.py
 random2
-asyncio
+asyncio==4.0.2
