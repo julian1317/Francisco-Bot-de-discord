@@ -61,15 +61,23 @@ async def on_message(message):
         except AttributeError:
             await message.channel.send('El usuario mencionado no está en un canal de voz.')
     elif message.content.startswith(prefix + 'campeon'):
-            try:
-                with open('campeones.txt', 'r', encoding='utf-8') as file:
-                    frases = file.readlines()
-                    random_frase = random.choice(frases)
-                    await message.channel.send("tu campeon random: " + random_frase)
-            except FileNotFoundError:
-                await message.channel.send('no sabe escoger gonorrea')
+        try:
+            with open('campeones.txt', 'r', encoding='utf-8') as file:
+                frases = file.readlines()
+                random_frase = random.choice(frases)
+                await message.channel.send("tu campeon random: " + random_frase)
+        except FileNotFoundError:
+            await message.channel.send('no sabe escoger gonorrea')
+    elif message.content.startswith(prefix + 'rico gano'):
+        await message.channel.send('¡Rico ganó!')
+        emojis = ["🎉", "🥳", "🎈", "🎊"]
+        for emoji in emojis:
+            await message.add_reaction(emoji)
+
+client.run(os.getenv('TOKEN'))
+
    
-client.run(os.getenv("TOKEN"))
+
 
 
 
