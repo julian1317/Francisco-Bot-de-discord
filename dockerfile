@@ -2,7 +2,7 @@
 FROM python:3.8-slim-buster
 
 # Establece el directorio de trabajo en /app
-WORKDIR /Chat
+WORKDIR /Chat.py
 
 # Copia los archivos del proyecto al directorio /app
 COPY . .

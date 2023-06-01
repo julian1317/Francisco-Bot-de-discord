@@ -75,14 +75,3 @@ async def on_message(message):
             await message.add_reaction(emoji)
 
 client.run(os.getenv('TOKEN'))
-
-   
-
-
-
-
-
-
-
-
-
